@@ -1,0 +1,8 @@
+<%= div_for shout do %>	
+	<%= link_to shout.user.username, shout.user %>
+	 Shouted >
+	<%= render shout.content %>
+	<%= link_to time_ago_in_words(shout.created_at),shout %>
+	<%= link_to "delete", shout, method: :delete, data: { confirm: "Are you sure?"} %>
+
+<% end %>
