@@ -1,7 +1,10 @@
-<%= div_for shout do %>	
+<%= div_for shout do %>
+	<%= gravatar shout.user %>
 	<%= link_to shout.user.username, shout.user %>
-	 Shouted >
+	 Shouted 
+	 <div><br>
 	<%= render shout.content %>
+	</div>
 	<%= link_to time_ago_in_words(shout.created_at),shout %>
 	<%= link_to "delete", shout, method: :delete, data: { confirm: "Are you sure?"} %>
 
