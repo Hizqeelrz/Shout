@@ -22,6 +22,10 @@
 			<p><%= alert %></p>
 		<% end -%>
 
+		<% if notice %>
+			<p class="new"><%= notice %></p>
+		<% end -%>
+
 	<%= yield %>
 
 	</body>
