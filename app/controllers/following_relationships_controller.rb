@@ -7,7 +7,7 @@ class FollowingRelationshipsController < ApplicationController
 
 	def destroy
 		current_user.unfollow user
-		redirect_to user, notice: "Following a User Dispactched."
+		redirect_to user, alert: "Following a User Dispactched."
 	end
 
 
