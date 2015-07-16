@@ -1,4 +1,5 @@
 class Search
+	extend ActiveModel::Naming
 	attr_reader :term
 
 	def initialize options = {}
@@ -7,6 +8,10 @@ class Search
 
 	def shouts
 		Shout.text_shouts.where(content_id: text_shouts)
+	end
+
+	def to_partial_path
+		"searches/search"
 	end
 
 	private
